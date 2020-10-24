@@ -16,26 +16,33 @@ void setup() {
   pinMode(led3Pin, OUTPUT);
 }
 
+// continuosly run LED flashing code
 void loop() {
-  loop2();
-  loop3();
-  digitalWrite(led1Pin, HIGH); // turn the LED on
-  delay(rate1); // wait for a second
-  digitalWrite(led1Pin, LOW); // turn the LED off
-  delay(rate1); // wait for a second
+  led1();
+  led2();
+  led3();
+}
+
+// Loop for first LED
+void led1() {
+  digitalWrite(led1Pin, HIGH); // turn LED1 on
+  delay(rate1); // wait for rate1
+  digitalWrite(led1Pin, LOW); // turn LED1 off
+  delay(rate1); // wait for rate1 
 }
 
 // Loop for second LED
-void loop2() {
-  digitalWrite(led2Pin, HIGH); // turn the LED on
-  delay(rate2); // wait for a second
-  digitalWrite(led2Pin, LOW);  // turn the LED off
-  delay(rate2); // wait for a second
+void led2() {
+  digitalWrite(led2Pin, HIGH); // turn LED2 on
+  delay(rate2); // wait for rate2
+  digitalWrite(led2Pin, LOW);  // turn LED2 off
+  delay(rate2); // wait for rate2
 }
 
+// Loop for third LED
 void loop3() {
-  digitalWrite(led3Pin, HIGH);   // turn the LED on
-  delay(rate3);                       // wait for a second
-  digitalWrite(led3Pin, LOW);    // turn the LED off
-  delay(rate3);
+  digitalWrite(led3Pin, HIGH); // turn LED3 on
+  delay(rate3); // wait for rate 3
+  digitalWrite(led3Pin, LOW); // turn LED3 off
+  delay(rate3); // wait for rate 3
 }
